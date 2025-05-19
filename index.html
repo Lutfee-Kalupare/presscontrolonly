@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ควบคุม ESP32</title>
+    <script src="App.js" defer></script>
+    <style>
+      body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+      button { padding: 15px 30px; font-size: 16px; margin: 10px; }
+    </style>
+  </head>
+  <body>
+    <h1>🛰️ ควบคุมมอเตอร์และวาล์ว</h1>
+
+    <h2>มอเตอร์</h2>
+    <button onclick="sendCommand('/motor_on')">🔓 เปิดมอเตอร์</button>
+    <button onclick="sendCommand('/motor_off')">🔒 ปิดมอเตอร์</button>
+
+    <h2>วาล์ว</h2>
+    <button onclick="sendCommand('/valve_on')">🔓 เปิดวาล์ว</button>
+    <button onclick="sendCommand('/valve_off')">🔒 ปิดวาล์ว</button>
+
+    <p id="status" style="margin-top: 30px; font-weight: bold;"></p>
+  </body>
+</html>
